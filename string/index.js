@@ -1,0 +1,30 @@
+var userProfile = {
+        username: " CoolUser99 ",
+        bio: " I LOVE coding! JavaScript is Great!!! "
+    };
+
+
+    function cleanUserBio(profile) {
+        
+        var cleanedUsername = profile.username.trim().toLowerCase();
+        var cleanedBio = profile.bio.trim().toLowerCase();
+
+        
+        cleanedBio = cleanedBio.replace(/javascript/g, "JS");
+
+        
+        var bioLength = cleanedBio.length;
+
+        
+        return {
+            username: cleanedUsername,
+            bio: cleanedBio,
+            bioLength: bioLength
+        };
+    }
+
+
+    var result = cleanUserBio(userProfile);
+
+
+    console.log(result);
